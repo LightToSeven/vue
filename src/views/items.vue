@@ -1,35 +1,15 @@
 <template lang="html">
     <div class="list">
-        <list-items v-for='item in listItems' :key="item.id" :phone='item'>
 
-        </list-items>
+            <p>{{ phone.name }}</p>
+            <p>{{ phone.tel }}</p>
     </div>
 </template>
 <script >
-    import listItems from './items.vue'
     export default{
-        data(){
-            return{
-                listItems:[
-                    {
-                        id:0,
-                        name:'vasya',
-                        tel:'099999999'
-                    },
-                    {
-                        id:1,
-                        name:'vasya2',
-                        tel:'099999999'
-                    }
-                ]
-            }
-        },
-
-        components:{
-            listItems
-        }
+        props:['phone']
     }
 </script>
-<style lang="scss">
+<style lang="css">
 
 </style>
